@@ -33,12 +33,19 @@ body {
   background-attachment: fixed;
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
 </style>
 
 <style scoped>
+/* DEEP SELECTOR EXAMPLE
+  can also use /deep/ if incompatible w/ preprocessor
+*/
+/* .content >>> .robot-name {
+  color: red;
+  border: 2px solid blue;
+} */
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
 main {
   margin: 0 auto;
   padding: 30px;
