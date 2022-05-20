@@ -6,10 +6,6 @@
           <img src="./assets/build-a-bot-logo.png" alt="logo" class="logo" />
           Build-a-Bot
         </li>
-        <li>
-          User: {{ user.userName }}
-          <button @click="changeUserName()">Change</button>
-        </li>
       </ul>
     </nav>
   </header>
@@ -25,23 +21,6 @@ export default {
   name: 'App',
   components: {
     RobotBuilder,
-  },
-  data() {
-    return {
-      user: {
-        userName: 'John',
-      },
-    };
-  },
-  provide() {
-    return {
-      user: this.user,
-    };
-  },
-  methods: {
-    changeUserName() {
-      this.user.userName = 'Fred';
-    },
   },
 };
 </script>
