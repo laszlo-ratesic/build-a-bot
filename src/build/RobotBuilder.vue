@@ -1,22 +1,23 @@
 <template>
   <div class="content">
-    <div class="part-info" id="partInfo"></div>
-    <CollapsibleSection>
-      <div class="preview-content">
-        <div class="top-row">
-          <img :src="selectedRobot.head.src" />
+    <div class="preview">
+      <CollapsibleSection>
+        <div class="preview-content">
+          <div class="top-row">
+            <img :src="selectedRobot.head.src" />
+          </div>
+          <div class="middle-row">
+            <img :src="selectedRobot.leftArm.src" class="rotate-left" />
+            <img :src="selectedRobot.torso.src" />
+            <img :src="selectedRobot.rightArm.src" class="rotate-right" />
+          </div>
+          <div class="bottom-row">
+            <img :src="selectedRobot.base.src" />
+          </div>
         </div>
-        <div class="middle-row">
-          <img :src="selectedRobot.leftArm.src" class="rotate-left" />
-          <img :src="selectedRobot.torso.src" />
-          <img :src="selectedRobot.rightArm.src" class="rotate-right" />
-        </div>
-        <div class="bottom-row">
-          <img :src="selectedRobot.base.src" />
-        </div>
-      </div>
-    </CollapsibleSection>
-    <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
+      </CollapsibleSection>
+      <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
+    </div>
     <div class="top-row">
       <!-- <div class='robot-name'>
         {{ selectedRobot.head.title }}
